@@ -9,3 +9,8 @@ variable "node_count" {
   type        = number
   default     = 2
 }
+
+variable "ssh_Key" {
+  description = "Path to local SSH public key"
+  type        = string
+}

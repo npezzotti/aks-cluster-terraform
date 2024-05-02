@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     admin_username = "ubuntu"
 
     ssh_key {
-      key_data = file("~/.ssh/service_terraform.pub")
+      key_data = file(var.ssh_key)
     }
   }
 
