@@ -22,10 +22,10 @@ resource "azurerm_kubernetes_cluster" "main" {
   dns_prefix          = random_pet.main.id
 
   default_node_pool {
-    name       = "defaultpool"
-    vm_size    = "Standard_D4_v2"
+    name                        = "defaultpool"
+    vm_size                     = "Standard_D4_v2"
     temporary_name_for_rotation = "temp"
-    node_count = var.node_count
+    node_count                  = var.node_count
   }
 
   linux_profile {
